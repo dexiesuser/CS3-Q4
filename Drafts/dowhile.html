@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+  </head>
+  <body>
+    <script>
+      let number;
+
+      do {
+        number = prompt("Enter a number between 0 and 100:");
+
+        if (number < 0 || number > 100 || isNaN(number)) {
+          alert("Invalid input. Please enter a number between 0 and 100.");
+        }
+      } while (number < 0 || number > 100 || isNaN(number));
+
+      alert("You entered: " + number);
+    </script>
+  </body>
+</html>

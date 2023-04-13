@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Multiplication Table</title>
+</head>
+<body>
+  <h1>Multiplication Table</h1>
+  <p>Enter beginning and ending values (between 2 and 10):</p>
+  <form>
+    <label for="beginning">Beginning:</label>
+    <input type="number" id="beginning" name="beginning" min="2" max="10">
+    <label for="ending">Ending:</label>
+    <input type="number" id="ending" name="ending" min="2" max="10">
+    <button type="button" onclick="generateTable()">Generate Table</button>
+  </form>
+  <div id="table-container"></div>
+  <script>
+    function generateTable() {
+      // Get the beginning and ending values from the form
+      var beginning = document.getElementById("beginning").value;
+      var ending = document.getElementById("ending").value;
+
+      // Check if the values are within the valid range
+      if (beginning < 2 || beginning > 10 || ending < 2 || ending > 10) {
+        alert("Please enter numbers between 2 and 10");
+        return;
+      }
+
+      // Generate the multiplication table and insert it into the page
+      var tableHtml = "<table>";
+      for (var i = beginning; i <= ending; i++) {
+        tableHtml += "<tr>";
+        for (var j = beginning; j <= ending; j++) {
+          tableHtml += "<td>" + i*j + "</td>";
+        }
+        tableHtml += "</tr>";
+      }
+      tableHtml += "</table>";
+      document.getElementById("table-container").innerHTML = tableHtml;
+    }
+  </script>
+</body>
+</html>
