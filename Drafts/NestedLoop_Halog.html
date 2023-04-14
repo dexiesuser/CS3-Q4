@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Nested Loop</title>
+    <style>
+    table {
+      border-collapse: collapse;
+      border: 1px solid black;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 5px;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+    <p>[enter a number between 2 and 10:]</p>
+    <form id="tForm">
+      <input type="number" id="start" name="start" min="2" max="10" />
+      by
+      <input type="number" id="end" name="end" min="2" max="10" />
+      <br>
+      <br>
+      <button type="button" onclick="mOutput()">Click here when ready!</button>
+    </form>
+    <br>
+    <br>
+    <div id="table-container"></div>
+    <script>
+      function mOutput() {
+      var start = document.getElementById("start").value;
+      var end = document.getElementById("end").value;
+
+      if (start < 2 || start > 10 || end < 2 || end > 10) {
+        if (confirm("Please enter numbers between 2 and 10")) {
+          document.getElementById("tForm").reset();
+        }
+        location.reload();
+      }
+
+      var tableHtml = "<table>";
+      for (var i = 1; i <= start; i++) {
+        tableHtml += "<tr>";
+        for (var j = 1; j <= end; j++) {
+          tableHtml += "<td>" + i*j + "</td>";
+        }
+        tableHtml += "</tr>";
+      }
+      tableHtml += "</table>";
+      document.getElementById("table-container").innerHTML = tableHtml;
+    }
+    </script>
+  </body>
+</html>
+
