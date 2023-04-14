@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>title</title>
+    <title>Multiplication Table</title>
   </head>
   <body>
     <p>[enter a number between 2 and 10:]</p>
-    <form>
+    <form id="tForm">
       <input type="number" id="beginning" name="beginning" min="2" max="10" />
       by
       <input type="number" id="ending" name="ending" min="2" max="10" />
@@ -23,7 +23,9 @@
 
       // Check if the values are within the valid range
       if (beginning < 2 || beginning > 10 || ending < 2 || ending > 10) {
-        alert("Please enter numbers between 2 and 10");
+        if (confirm("Please enter numbers between 2 and 10")) {
+          document.getElementById("tForm").reset();
+        }
         location.reload();
       }
 
