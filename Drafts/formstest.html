@@ -29,9 +29,9 @@
 
       // Generate the multiplication table and insert it into the page
       var tableHtml = "<table>";
-      for (var i = beginning; i <= ending; i++) {
+      for (var i = 1; i <= ending; i++) {
         tableHtml += "<tr>";
-        for (var j = beginning; j <= ending; j++) {
+        for (var j = 1; j <= ending; j++) {
           tableHtml += "<td>" + i*j + "</td>";
         }
         tableHtml += "</tr>";
