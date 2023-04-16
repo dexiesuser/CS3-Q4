@@ -17,7 +17,7 @@
   </head>
   <body>
     <p>[enter a number between 2 and 10:]</p>
-    <form id="tForm">
+    <form>
       <input type="number" id="start" name="start" min="2" max="10" />
       by
       <input type="number" id="end" name="end" min="2" max="10" />
@@ -27,7 +27,7 @@
     </form>
     <br>
     <br>
-    <div id="table-container"></div>
+    <div id="genTable"></div>
     <script>
       function mOutput() {
       var start = document.getElementById("start").value;
@@ -38,16 +38,16 @@
         location.reload();
       }
 
-      var tableHtml = "<table>";
+      var mTable = "<table>";
       for (var i = 1; i <= start; i++) {
-        tableHtml += "<tr>";
+        mTable += "<tr>";
         for (var j = 1; j <= end; j++) {
-          tableHtml += "<td>" + i*j + "</td>";
+          mTable += "<td>" + i*j + "</td>";
         }
-        tableHtml += "</tr>";
+        mTable += "</tr>";
       }
-      tableHtml += "</table>";
-      document.getElementById("table-container").innerHTML = tableHtml;
+      mTable += "</table>";
+      document.getElementById("genTable").innerHTML = mTable;
     }
     </script>
   </body>
