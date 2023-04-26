@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+  </head>
+  <body onload="geneticCoding()">
+    <script>
+      const codonTable = {
+        /*codon: ["Met", "STOP", "Leu", "Arg", "Ser", "Gly", "Val", "Pro", "Thr", "Ala", "Ile", "Phe", "Tyr", "His", "Gln", "Asn", "Lys", "Asp", "Glu", "Cys", "Trp" ],*/
+        Met: ["AUG"] /* uga uaa uag */,
+        STOP: ["UGA", "UAA", "UAG"] /*uua, uug, cuu, cuc, cua, cug */,
+        Leu: ["UUA", "UUG", "CUU", "CUC", "CUA","CUG"] /*cgu, cgc, cga, cgg, aga, agg */,
+        Arg: ["CGU", "CGC", "CGA", "CGG", "AGA", "AGG",] /*ucu, ucc, uca, ucg, agu, agc*/,
+        Ser: ["UCU", "UCC", "UCA", "UCG", "AGU", "AGC"] /*ggu, ggc, gga, ggg*/,
+        Gly: ["GGU", "GGC", "GGA", "GGG"] /*guu, guc, gua, gug*/,
+        Val: ["GUU", "GUC", "GUA", "GUG"] /*ccu, ccc, cca, ccg*/,
+        Pro: ["CCU", "CCC", "CCA", "CCG"] /*acu, acc, aca, acg*/,
+        Thr: ["ACU", "ACC", "ACA", "ACG"] /*gcu, gcc, gca, gcg*/,
+        Ala: ["GCU", "GCC", "GCA", "GCG"] /*auu, auc, aua*/,
+        Ile: ["AUU", "AUC", "AUA"] /*uuu, uuc*/,
+        Phe: ["UUU", "UUC"] /*uau, uac*/,
+        Tyr: ["UAU", "UAC"] /*cau, cac*/,
+        His: ["CAU", "CAC"] /*caa, cag*/,
+        Gln: ["CAA", "CAG"] /*aau, aac*/,
+        Asn: ["AAU", "AAC"] /*aaa, aag*/,
+        Lys: ["AAA", "AAG"] /*gau, gac*/,
+        Asp: ["GAU", "GAC"] /*gaa, gag*/,
+        Glu: ["GAA", "GAG"] /*ugu, ugc*/,
+        Cys: ["UGU", "UGC"],
+        Trp: ["UGG"],
+      };
+
+      function geneticCoding() {
+        let mRNA = prompt("Enter mRNA sequence", "").toUpperCase();
+        let arr = [];
+        let aminoAcids = [];
+
+        for (let i = 0; i < mRNA.length - 2; i++) {
+        let codon = mRNA.substring(i, i+3);
+        if (codon == "AUG") {
+            mRNA = mRNA.slice(i);
+            break;
+        }
+    }
+    for (let i = 0; i < mRNA.length - 2; i+=3) {
+        let codon = mRNA.substring(i, i+3);
+        if (codon == "UGA" || codon == "UAA" || codon == "UAG") {
+            mRNA = mRNA.slice(0, i+3);
+            break;
+        }
+    }
+    for (let i = 0; i < mRNA.length - 2; i+=3) {
+        let codon = mRNA.substring(i, i+3);
+        let aminoAcid = Object.keys(codonTable).find(key => codonTable[key].includes(codon));
+          arr.push(codon);
+          aminoAcids.push(aminoAcid);
+        }
+
+        document.write("\n <br> [" + arr.join(", ") + "]");
+        for (let i = 0; i < arr.length; i++) {
+          document.write("\n <br>" + arr[i] + " ---> " + aminoAcids[i]);
+        }
+      }
+    </script>
+  </body>
+</html>
