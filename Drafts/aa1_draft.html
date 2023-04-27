@@ -13,13 +13,20 @@
             let mRNA = prompt("Enter mRNA sequence", "").toUpperCase();
             let arr = [];
             let aminoAcids = [];
+            var startCodon;
 
             for (let i = 0; i < mRNA.length - 2; i++) {
                 let codon = mRNA.substring(i, i+3);
                 if (codon == "AUG") {
                     mRNA = mRNA.slice(i);
+                    startCodon = true;
                     break;
                 }
+            }
+
+            if (!startCodon) {
+              document.write("\n <br> [" + "No Starting Codon" + "]");
+              return;
             }
             for (let i = 0; i < mRNA.length - 2; i+=3) {
                 let codon = mRNA.substring(i, i+3);
