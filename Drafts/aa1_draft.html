@@ -28,6 +28,7 @@
               document.write("\n <br> [" + "No Starting Codon" + "]");
               return;
             }
+          
             for (let i = 0; i < mRNA.length - 2; i+=3) {
                 let codon = mRNA.substring(i, i+3);
                 if (codon == "UGA" || codon == "UAA" || codon == "UAG") {
@@ -35,6 +36,7 @@
                     break;
                 }
             }
+          
             for (let i = 0; i < mRNA.length - 2; i+=3) {
                 let codon = mRNA.substring(i, i+3);
                 let aminoAcid;
