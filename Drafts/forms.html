@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+
+<body>
+    <form style="border:1px solid #ccc">
+        <fieldset>
+            <legend>Sign Up</legend>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+            <label for="name"><b>Name</b></label>
+            <input type="text" placeholder="Enter Name" name="name" required>
+            <br>
+
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter username" name="username" required>
+            <br>
+
+            <label for="gender">Gender</label>
+            <select name="gender" id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="rns">Rather not say</option>
+            </select>
+            <br>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <br>
+
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Enter Email" name="email" required>
+            <br>
+
+            <label for="address"><b>Address</b></label>
+            <input type="text" placeholder="Enter current address" name="address" required>
+            <br>
+
+            <label for="comment"><b>What are your interests?</b></label>
+            <br>
+            <textarea rows="5" cols="33" placeholder="Share your ideas here :)">
+            </textarea>
+            </label>
+            
+
+            <div class="clearfix">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>
