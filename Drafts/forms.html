@@ -10,6 +10,14 @@
         * {
             font-family: 'Outfit', sans-serif;
         }
+
+        body {
+            background-image: url('https://img.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg?w=900&t=st=1683120906~exp=1683121506~hmac=4fc22904220342139bfe2a9ede1f216fc0d83c028de748093d3e178a30ef6f24');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
         label, input, select {
             padding: 3px;
             margin-bottom: 5px;
@@ -120,9 +128,11 @@
     <script>
         function checkInput(text) {
             if (text.value === "") {
-                text.style.borderColor = "red";
-            } else {
-                text.style.borderColor = "green";
+            text.style.borderColor = "red";
+            text.style.boxShadow = "0 0 10px red";
+        } else {
+            text.style.borderColor = "green";
+            text.style.boxShadow = "0 0 10px green";
             }
         }
 
@@ -133,6 +143,22 @@
             document.getElementById("email").value = "";
             document.getElementById("address").value = "";
             document.getElementById("comment").value = "";
+            document.getElementById("gender").selectedIndex = 0;
+            var inputs = document.getElementsByTagName("input");
+            var selects = document.getElementsByTagName("select");
+            var textarea = document.getElementsByTagName("textarea");
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].style.borderColor = "";
+                inputs[i].style.boxShadow = "";
+            }
+            for (var i = 0; i < selects.length; i++) {
+                selects[i].style.borderColor = "";
+                selects[i].style.boxShadow = "";
+            }
+            for (var i = 0; i < textarea.length; i++) {
+                textarea[i].style.borderColor = "";
+                textarea[i].style.boxShadow = "";
+            }
         }
 
         function sendData() {
