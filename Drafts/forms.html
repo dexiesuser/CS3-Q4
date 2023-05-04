@@ -34,6 +34,8 @@
         }
 
         form {
+            position: relative;
+            z-index: 1;
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -41,6 +43,7 @@
         }
 
         #info {
+            z-index: 2;
             max-width: 600px;
             text-align: center;
             margin:auto;
@@ -51,6 +54,7 @@
             background-color: #f1f1f1;
             border: 1px solid #ccc;
         }
+
 
         .clearfix {
             padding-bottom: 40px;
@@ -102,7 +106,8 @@
             <br>
 
             <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" id="psw" onblur="checkInput(this)" onfocus="this.style.borderColor = 'green'" required>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" onblur="checkInput(this)" onfocus="this.style.borderColor = 'green'"required>
+            <p id="password-error" style="color: red; display: none;">Password must be at least 8 characters long.</p>
             <br>
 
             <label for="email"><b>Email</b></label>
@@ -169,6 +174,17 @@
             var email = document.getElementById("email").value;
             var address = document.getElementById("address").value;
             var comment = document.getElementById("comment").value;
+
+            var passwordInput = document.getElementById("psw");
+            var passwordError = document.getElementById("password-error");
+
+            if (passwordInput.value.length < 8) {
+                passwordError.style.display = "block";
+                clearInput();
+                document.getElementById("info").style.display = "none";
+            } else {
+                passwordError.style.display = "none";
+            }
 
             var formData = "<p><b>Name: </b> " + name + "</p>"
             + "<p><b>Username: </b> " + username + "</p>"
