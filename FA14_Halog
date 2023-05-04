@@ -126,6 +126,7 @@
             <div class="clearfix">
                 <button type="button" class="cancelbtn" onclick="clearInput()">Cancel</button>
                 <button type="submit" class="signupbtn">Sign Up</button>
+                <button type="button" class="clearbtn" onclick="clearBtn()">Reset All</button>
             </div>
         </fieldset>
     </form>
@@ -164,6 +165,11 @@
                 textarea[i].style.borderColor = "";
                 textarea[i].style.boxShadow = "";
             }
+        }
+        
+        function clearBtn() {
+            clearInput();
+            document.getElementById("info").style.display = "none";
         }
 
         function sendData() {
