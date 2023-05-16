@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>NC-Win! Online Reviewer</title>
+  <link href="htdocs/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<!-- saving for myself later: https://codesandbox.io/s/flexbox-nav-version-3-v22qo -->
+
+<body>
+  <script src="htdocs/script.js"></script>
+  <div class="container">
+    <br>
+    <header>
+      <a class="logo" href="https://pshs.edu.ph/"><img
+          src="https://www.goethe.de/resources/files/png126/pshs-logo-white-outline-1-formatkey-png-w320m.png"
+          alt="logo" width="90" height="90"></a>
+      <nav>
+        <ul class="nav__links">
+          <li><a href="home.html">Homepage</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1cNWw4tqX5kJQRdRS5CyotKMvQA4D58nG?usp=sharing">Studying</a> </li>
+          <li><a href="htdocs/info.html">Authors</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- goals: create forms that simulate reviewer about science grade 6 level (google forms), be able to fact-check, provide own information on another html page -->
+    <div id="banner">
+      <h2>NCE Reviewer: Science</h2>
+    </div>
+
+    <form>
+      <br>
+      <br>
+      
+      <div id="topq"><h3>Multiple Choice Questions</h3></div>
+      <h4>Q1: What type of rock forms from the cooling of lava?</h4>
+      <input name="q1" id="q1A" type="radio" value="A C" required>
+      <label for="q1A">A. Sedimentary Rock</label><br>
+      <input name="q1" id="q1B" type="radio" value="B C" required>
+      <label for="q1B">B. Metamorphic Rock</label><br>
+      <input name="q1" id="q1C" type="radio" value="C C" required>
+      <label for="q1C">C. Igneous Rock</label><br>
+      <hr>
+      <h4>Q2: What are the two main gases in Earth's atmosphere?</h4>
+      <input name="q2" id="q2A" type="radio" value="A B" required>
+      <label for="q2A">A. Oxygen and Hydrogen</label><br>
+      <input name="q2" id="q2B" type="radio" value="B B" required>
+      <label for="q2B">B. Oxygen and Nitrogen</label><br>
+      <input name="q2" id="q2C" type="radio" value="C B" required>
+      <label for="q2C">C. Oxygen and Carbon Dioxide</label><br>
+      <hr>
+      <h4>Q3: Which two bodily systems are the kidneys part of?</h4>
+      <input name="q3" id="q3A" type="radio" value="A B" required>
+      <label for="q3A">A. Digestive and Urinary System</label><br>
+      <input name="q3" id="q3B" type="radio" value="B B" required>
+      <label for="q3B">B. Endocrine and Urinary System</label><br>
+      <input name="q3" id="q3C" type="radio" value="C B" required>
+      <label for="q3C">C. Circulatory and Urinary System</label><br>
+      <hr>
+      <h4>Q4: Who discovered Jupiter's four biggest moons?</h4>
+      <input name="q4" id="q4A" type="radio" value="A A" required>
+      <label for="q4A">A. Galileo Galilei</label><br>
+      <input name="q4" id="q4B" type="radio" value="B A" required>
+      <label for="q4B">B. Isaac Newton</label><br>
+      <input name="q4" id="q4C" type="radio" value="C A" required>
+      <label for="q4C">C. Nicolaus Copernicus</label><br>
+      <hr>
+      <h4>Q5: Who stated that the planets orbited the sun in elliptical instead of circular orbits?</h4>
+      <input name="q5" id="q5A" type="radio" value="A C" required>
+      <label for="q5A">A. Tycho Brahe</label><br>
+      <input name="q5" id="q5B" type="radio" value="B C" required>
+      <label for="q5B">B. William Herschel</label><br>
+      <input name="q5" id="q5C" type="radio" value="C C" required>
+      <label for="q5C">C. Johannes Kepler</label><br>
+      <hr>
+      <h4>Q6: Which option is in the right order?</h4>
+      <ul>
+        <h4>Digestive System</h4>
+        <li>I. Stomach</li>
+        <li>II. Large Intestine</li>
+        <li>III. Mouth</li>
+        <li>IV. Small Intestine</li>
+        <li>V. Anus</li>
+        <li>VI. Esophagus</li>
+      </ul>
+      <input name="q6" id="q6A" type="radio" value="A A" required>
+      <label for="q6A">A. III, VI, I, IV, II, V</label><br>
+      <input name="q6" id="q6B" type="radio" value="B A" required>
+      <label for="q6B">B. III, I, VI, II, IV, V</label><br>
+      <input name="q6" id="q6C" type="radio" value="C A" required>
+      <label for="q6C">C. III, VI, I, II, IV, V</label><br>
+      <hr>
+      <h4>Q7: When two tectonic plates are pushing into each other, what forms as a result?</h4>
+      <input name="q7" id="q7A" type="radio" value="A B" required>
+      <label for="q7A">A. Rift valley</label><br>
+      <input name="q7" id="q7B" type="radio" value="B B" required>
+      <label for="q7B">B. Mountain range</label><br>
+      <input name="q7" id="q7C" type="radio" value="C B" required>
+      <label for="q7C">C. Fault line</label><br>
+      <hr>
+      <h4>Q8: What is the biggest internal organ in the human body?</h4>
+      <input name="q8" id="q8A" type="radio" value="A B" required>
+      <label for="q8A">A. Skin</label><br>
+      <input name="q8" id="q8B" type="radio" value="B B" required>
+      <label for="q8B">B. Liver</label><br>
+      <input name="q8" id="q8C" type="radio" value="C B" required>
+      <label for="q8C">C. Lungs</label><br>
+      <hr>
+      <h4>Q9: When molten rock is still below the Earth's surface, what is it called?</h4>
+      <input name="q9" id="q9A" type="radio" value="A C" required>
+      <label for="q9A">A. Lava</label><br>
+      <input name="q9" id="q9B" type="radio" value="B C" required>
+      <label for="q9B">B. Igneous Rock</label><br>
+      <input name="q9" id="q9C" type="radio" value="C C" required>
+      <label for="q9C">C. Magma</label><br>
+      <hr>
+      <h4>Q10: Which option is in the right order?</h4>
+      <ul>
+        <h4>Space Rock Terminology</h4>
+        <li>I. Meteorite</li>
+        <li>II. Meteoroid</li>
+        <li>III. Meteor</li>
+      </ul>
+      <input name="q10" id="q10A" type="radio" value="A A" required>
+      <label for="q10A">A. II, III, I</label><br>
+      <input name="q10" id="q10B" type="radio" value="B A" required>
+      <label for="q10B">B. III, II, I</label><br>
+      <input name="q10" id="q10C" type="radio" value="C A" required>
+      <label for="q10C">C. III, I, II</label><br>
+      <hr>
+      <h4>Q11: Who formulated the theory of continental drift?</h4>
+      <input name="q11" id="q11A" type="radio" value="A B" required>
+      <label for="q11A">A. William Smith</label><br>
+      <input name="q11" id="q11B" type="radio" value="B B" required>
+      <label for="q11B">B. Alfred Wegener</label><br>
+      <input name="q11" id="q11C" type="radio" value="C B" required>
+      <label for="q11C">C. James Hutton</label><br>
+      <hr>
+      <h4>Q12: Which option is in the right order?</h4>
+      <ul>
+        <h4>Layers of the Earth</h4>
+        <li>I. Mantle</li>
+        <li>II. Crust</li>
+        <li>III. Outer Core</li>
+        <li>IV. Inner Core</li>
+      </ul>
+      <input name="q12" id="q12A" type="radio" value="A B" required>
+      <label for="q12A">A. IV, III, II, I</label><br>
+      <input name="q12" id="q12B" type="radio" value="B B" required>
+      <label for="q12B">B. IV, III, I, II</label><br>
+      <input name="q12" id="q12C" type="radio" value="C B" required>
+      <label for="q12C">C. IV, I, III, II</label><br>
+      <hr>
+      <h4>Q13: The branch of science that is involved with studying living things is called?</h4>
+      <input name="q13" id="q13A" type="radio" value="A C" required>
+      <label for="q13A">A. Botany</label><br>
+      <input name="q13" id="q13B" type="radio" value="B C" required>
+      <label for="q13B">B. Ecology</label><br>
+      <input name="q13" id="q13C" type="radio" value="C C" required>
+      <label for="q13C">C. Biology</label><br>
+      <hr>
+      <h4>Q14: Which option is in the right order?</h4>
+      <ul>
+        <h4>Layers of the Atmosphere</h4>
+        <li>I. Mesosphere</li>
+        <li>II. Exosphere</li>
+        <li>III. Stratosphere</li>
+        <li>IV. Thermosphere</li>
+        <li>V. Troposphere</li>
+      </ul>
+      <input name="q14" id="q14A" type="radio" value="A A" required>
+      <label for="q14A">A. V, III, I, IV, II</label><br>
+      <input name="q14" id="q14B" type="radio" value="B A" required>
+      <label for="q14B">B. III, I, V, IV, II</label><br>
+      <input name="q14" id="q14C" type="radio" value="C A" required>
+      <label for="q14C">C. III, IV, V, I, II</label><br>
+      <hr>
+      <h4>Q15: How many planets are there in the Solar System?</h4>
+      <input name="q15" id="q15A" type="radio" value="A B" required>
+      <label for="q15A">A. 9</label><br>
+      <input name="q15" id="q15B" type="radio" value="B B" required>
+      <label for="q15B">B. 8</label><br>
+      <input name="q15" id="q15C" type="radio" value="C B" required>
+      <label for="q15C">C. 10</label><br>
+      <hr>
+      <div id="topq"><h3>Identification Questions</h3></div>
+      <h4>Q16: Inventor Thomas Edison created the first <input id="q16" type="text"> in 1880, allowing towns and cities to be
+        lit using electrical power.</h4>
+      <hr>
+      <h4>Q17: Biologist Charles Darwin came up with the theory of <input id="q17" type="text" required> after experimenting with the
+        different traits of pigeons.</h4>
+      <hr>
+      <h4>Q18: Astronomer Urbain le Verrier helped discover the planet <input id="q18" type="text" required> after noticing
+        discrepancies in the orbit of Uranus.</h4>
+      <hr>
+      <h4>Q19: Chemist Dmitri Mendeleev created the world's first <input id="q19" type="text" required>, neatly arranging the elements into rows (periods) and columns (groups).</h4>
+      <hr>
+      <h4>Q20: Physicist and chemist Allesandro Volta invented the world's first <input id="q20" type="text" required>, allowing the
+        storage of electricity for later use.</h4>
+    </form>
+    <div id="btnmenu">
+      <button id="submit" onclick="submitAnswers()"><h3>Submit</h3></button>
+    <button id="reset" onclick="resetForm()"><h3>Reset</h3></button>
+    </div>
+    <table style="display: none;" id="resultDisplay">
+      <tr>
+        <th>Question No.</th>
+        <th>Your Answer</th>
+        <th>Correct Answer</th>
+      </tr>
+    </table>
+    <h4 id="scoreDisplay" style="display:none;">Your Score:</h4>
+  </div>
+</body>
+
+</html>

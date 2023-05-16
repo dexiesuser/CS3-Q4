@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@500&display=swap');
+
+* {
+  font-family: 'Wix Madefor Display', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-image: linear-gradient(to bottom right, #82cfff, #00a6d9);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: transparent;
+}
+
+table {
+  padding: 0%;
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
+td {
+  border: 1px solid black;
+  margin: 0%;
+  padding: 5px;
+  background-color: rgb(225, 225, 225);
+}
+
+.logo {
+  cursor: pointer;
+  order: 3;
+  margin-left: auto;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease 0s;
+}
+
+nav {
+  order: 1;
+}
+
+.nav__links a,
+.cta,
+.overlay__content a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nav__links li {
+  padding: 9px 25px;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  padding: 9px 25px;
+  text-decoration: none;
+}
+
+main {
+  background-color: darkgrey;
+  width: 400px;
+  height: 750px;
+  padding: 50px;
+  margin: 0 auto;
+  margin-left: 10%;
+  text-align: center;
+}
+
+main1 {
+  background-color: darkgrey;
+  width: 300px;
+  padding: 50px;
+  margin: 0;
+  margin-left: 10%;
+  text-align: center;
+}
+
+#grpimg {
+  width: 500px;
+  height: 375px;
+  position: absolute;
+  top: 45%;
+  right: 10%;
+}
+
+
+#banner {
+  background-image: url("https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+#topq {
+  height: 50px;
+  width: 50%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  background-image: linear-gradient(to right, #ddd, #fff, #ddd);
+  border: solid black 2px;
+  border-radius: 10px;
+}
+
+form {
+  margin: 20px auto;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  background-image: linear-gradient(to right, #ddd, #fff, #ddd);
+  border: solid black 2px;
+  border-radius: 10px;
+}
+
+button {
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 100px;
+  height: auto;
+  text-align: center;
+  margin: 20px auto;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  color: rgba(255, 87, 51);
+  box-shadow: 0 5px 15px rgba(255, 87, 51);
+}
+
+#btnmenu {
+  display: flex;
+}
+
+#sb1 {
+  display: flex;
+}
+
+#mainphoto {
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+
+  .nav__links li {
+    padding: 5px 15px;
+    font-size: 14px;
+  }
+
+  .nav__links {
+    justify-content: center;
+  }
+
+  .nav__links li {
+    margin: 10px 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav__links li a:hover {
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .nav__links li a:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+    border-radius: 25px;
+  }
+}
